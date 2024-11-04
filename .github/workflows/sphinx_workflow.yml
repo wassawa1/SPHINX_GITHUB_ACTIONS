@@ -8,7 +8,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -28,20 +28,15 @@ jobs:
           cd docs
           ./make.bat html
 
-  upload-and-deploy:
+  deploy:
     runs-on: windows-latest
     needs: setup-and-build
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Upload generated HTML to articles
-        run: |
-          echo "Uploading articles..."
-          # Add your custom script or command for uploading to 'articles'
+        uses: actions/checkout@v5
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/_build/html  # Adjust the path if necessary
+          publish_dir: ./docs/_build/html
