@@ -8,10 +8,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@vX
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@vX
         with:
           python-version: 3.12
 
@@ -33,7 +33,7 @@ jobs:
     needs: setup-and-build
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@vX
 
       - name: Upload generated HTML to articles
         run: |
@@ -41,7 +41,7 @@ jobs:
           # Add your custom script or command for uploading to 'articles'
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@vX
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/_build/html  # Adjust the path if necessary
