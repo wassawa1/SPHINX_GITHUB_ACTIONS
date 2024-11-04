@@ -1,0 +1,49 @@
+name: Sphinx Documentation Workflow
+
+on:
+  push:
+
+jobs:
+  setup-and-build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+
+      - name: Install dependencies
+        run: |
+          python -m venv env
+          env\Scripts\activate
+          pip install --upgrade pip
+          pip install -r envs/requirements.txt
+
+      - name: Build Sphinx documentation
+        run: |
+          env\Scripts\activate
+          cd docs
+          ./make.bat html
+
+  upload-and-deploy:
+    runs-on: windows-latest
+    needs: setup-and-build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Upload generated HTML to articles
+        run: |
+          echo "Uploading articles..."
+          # Add your custom script or command for uploading to 'articles'
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/_build/html  # Adjust the path if necessary
+ls
+ls
