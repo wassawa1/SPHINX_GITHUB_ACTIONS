@@ -26,6 +26,7 @@ jobs:
         run: |
           env\Scripts\activate
           cd docs
+          ./make.bat clean
           ./make.bat html
 
   deploy:

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>operation_func module &mdash; test  documentation</title>
+  <title>operation_func module &mdash; project_name  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -31,7 +31,7 @@
           
           
           <a href="index.html" class="icon icon-home">
-            test
+            project_name
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -47,10 +47,17 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">operation_func module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#operation_func.Calculator"><code class="docutils literal notranslate"><span class="pre">Calculator</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.add"><code class="docutils literal notranslate"><span class="pre">Calculator.add()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.cos"><code class="docutils literal notranslate"><span class="pre">Calculator.cos()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.divide"><code class="docutils literal notranslate"><span class="pre">Calculator.divide()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.factorial"><code class="docutils literal notranslate"><span class="pre">Calculator.factorial()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.gcd"><code class="docutils literal notranslate"><span class="pre">Calculator.gcd()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.logarithm"><code class="docutils literal notranslate"><span class="pre">Calculator.logarithm()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.multiply"><code class="docutils literal notranslate"><span class="pre">Calculator.multiply()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.power"><code class="docutils literal notranslate"><span class="pre">Calculator.power()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.sin"><code class="docutils literal notranslate"><span class="pre">Calculator.sin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.sqrt"><code class="docutils literal notranslate"><span class="pre">Calculator.sqrt()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.subtract"><code class="docutils literal notranslate"><span class="pre">Calculator.subtract()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operation_func.Calculator.tan"><code class="docutils literal notranslate"><span class="pre">Calculator.tan()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -63,7 +70,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">test</a>
+          <a href="index.html">project_name</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -87,108 +94,77 @@
 <dt class="sig sig-object py" id="operation_func.Calculator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operation_func.</span></span><span class="sig-name descname"><span class="pre">Calculator</span></span><a class="reference internal" href="_modules/operation_func.html#Calculator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A simple calculator class to demonstrate basic arithmetic functionality.</p>
+<p>A more complex calculator class with additional mathematical functionality.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="operation_func.Calculator.add">
 <span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.add"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.add" title="Link to this definition"></a></dt>
 <dd><p>Adds two numbers.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<em>float</em>) – The first number.</p></li>
-<li><p><strong>b</strong> (<em>float</em>) – The second number.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The sum of a and b.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operation_func.Calculator.cos">
+<span class="sig-name descname"><span class="pre">cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.cos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.cos" title="Link to this definition"></a></dt>
+<dd><p>Calculates the cosine of an angle in radians.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operation_func.Calculator.divide">
 <span class="sig-name descname"><span class="pre">divide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.divide"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.divide" title="Link to this definition"></a></dt>
 <dd><p>Divides the first number by the second number.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<em>float</em>) – The first number.</p></li>
-<li><p><strong>b</strong> (<em>float</em>) – The second number.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The result of a / b.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the second number is zero.</p>
-</dd>
-</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operation_func.Calculator.factorial">
+<span class="sig-name descname"><span class="pre">factorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.factorial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.factorial" title="Link to this definition"></a></dt>
+<dd><p>Calculates the factorial of a non-negative integer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operation_func.Calculator.gcd">
+<span class="sig-name descname"><span class="pre">gcd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.gcd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.gcd" title="Link to this definition"></a></dt>
+<dd><p>Calculates the greatest common divisor (GCD) of two integers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operation_func.Calculator.logarithm">
+<span class="sig-name descname"><span class="pre">logarithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2.718281828459045</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.logarithm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.logarithm" title="Link to this definition"></a></dt>
+<dd><p>Calculates the logarithm of a number with the specified base.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operation_func.Calculator.multiply">
 <span class="sig-name descname"><span class="pre">multiply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.multiply"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.multiply" title="Link to this definition"></a></dt>
 <dd><p>Multiplies two numbers.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<em>float</em>) – The first number.</p></li>
-<li><p><strong>b</strong> (<em>float</em>) – The second number.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The product of a and b.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operation_func.Calculator.power">
 <span class="sig-name descname"><span class="pre">power</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.power"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.power" title="Link to this definition"></a></dt>
 <dd><p>Calculates the power of a number.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>base</strong> (<em>float</em>) – The base number.</p></li>
-<li><p><strong>exponent</strong> (<em>float</em>) – The exponent to raise the base to.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The result of base raised to the power of exponent.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operation_func.Calculator.sin">
+<span class="sig-name descname"><span class="pre">sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.sin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.sin" title="Link to this definition"></a></dt>
+<dd><p>Calculates the sine of an angle in radians.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operation_func.Calculator.sqrt">
+<span class="sig-name descname"><span class="pre">sqrt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.sqrt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.sqrt" title="Link to this definition"></a></dt>
+<dd><p>Calculates the square root of a number.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operation_func.Calculator.subtract">
 <span class="sig-name descname"><span class="pre">subtract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.subtract"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.subtract" title="Link to this definition"></a></dt>
 <dd><p>Subtracts the second number from the first number.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<em>float</em>) – The first number.</p></li>
-<li><p><strong>b</strong> (<em>float</em>) – The second number.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The result of a - b.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operation_func.Calculator.tan">
+<span class="sig-name descname"><span class="pre">tan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/operation_func.html#Calculator.tan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#operation_func.Calculator.tan" title="Link to this definition"></a></dt>
+<dd><p>Calculates the tangent of an angle in radians.</p>
 </dd></dl>
 
 </dd></dl>
@@ -205,7 +181,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Author.</p>
+    <p>&#169; Copyright 2024, author_name.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
