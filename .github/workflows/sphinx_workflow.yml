@@ -4,49 +4,23 @@ on:
   push:
 
 jobs:
-  setup:
+  build-and-deploy:
     runs-on: windows-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.12
-
-  install-dependencies:
-    runs-on: windows-latest
-    needs: setup
-    steps:
-      - uses: actions/checkout@v4
 
       - name: Set up Miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
-          python-version: 3.12  # Set the Python version from the matrix
+          python-version: 3.12
           activate-environment: sphinx-env
-
-      - name: Cache environment
-        uses: actions/cache@v4
-        with:
-          path: ~/miniconda3/envs/sphinx-env
-          key: ${{ runner.os }}-conda-env
-          restore-keys: |
-            ${{ runner.os }}-conda-env
 
       - name: Install dependencies
         run: |
           conda install pip
           pip install -r ./sphinx_setupkit/requirements.txt
-
-  generate-docs:
-    runs-on: windows-latest
-    needs: install-dependencies
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
 
       - name: Generate Sphinx Documentation
         run: |
@@ -54,32 +28,11 @@ jobs:
           powershell -ExecutionPolicy Bypass -File ./generate_sphinx_docs.ps1
           cd ..
 
-  build-docs:
-    runs-on: windows-latest
-    needs: generate-docs
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Restore cached environment
-        uses: actions/cache@v4
-        with:
-          path: ~/miniconda3/envs/sphinx-env
-          key: ${{ runner.os }}-conda-env
-
       - name: Build Sphinx documentation
         run: |
-          conda activate sphinx-env
           cd docs
           ./make.bat clean
           ./make.bat html
-
-  deploy:
-    runs-on: windows-latest
-    needs: build-docs
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
