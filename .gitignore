@@ -1,5 +1,3 @@
-./docs/_build/
-./docs/_static/
-./docs/_templates/
+./docs/* 
 __pycache__
 .vscode
