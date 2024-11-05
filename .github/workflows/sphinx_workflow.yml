@@ -55,7 +55,7 @@ jobs:
 
       - name: Build Sphinx documentation
         run: |
-          env\Scripts\activate
+          conda activate sphinx-env
           cd docs
           ./make.bat clean
           ./make.bat html
