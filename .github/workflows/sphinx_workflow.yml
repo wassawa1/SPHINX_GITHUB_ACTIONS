@@ -19,15 +19,12 @@ jobs:
     runs-on: windows-latest
     needs: setup
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
           python -m venv env
-          env\Scripts\activate
-          pip install --upgrade pip
-          pip install -r envs/requirements.txt
+          .\env\Scripts\activate && pip install --upgrade pip -r ./sphinx_setupkit/requirements.txt
 
   generate-docs:
     runs-on: windows-latest
