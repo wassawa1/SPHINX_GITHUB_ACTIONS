@@ -21,10 +21,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-update-conda: true
+          python-version: 3.12  # Set the Python version from the matrix
+          activate-environment: sphinx-env
+
       - name: Install dependencies
         run: |
-          python -m venv env
-          .\env\Scripts\activate && pip install --upgrade pip -r ./sphinx_setupkit/requirements.txt
+          conda install pip
+          pip install -r ./sphinx_setupkit/requirements.txt
 
   generate-docs:
     runs-on: windows-latest
