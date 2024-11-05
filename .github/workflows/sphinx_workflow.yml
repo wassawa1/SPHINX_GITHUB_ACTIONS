@@ -43,7 +43,7 @@ jobs:
       - name: Generate Sphinx Documentation
         run: |
           cd sphinx_setupkit
-          ./generate_sphinx_docs.ps1
+          powershell -ExecutionPolicy Bypass -File ./sphinx_setupkit/generate_sphinx_docs.ps1
           cd ..
 
   build-docs:
