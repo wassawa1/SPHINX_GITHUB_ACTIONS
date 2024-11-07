@@ -1,3 +1,5 @@
+Get-Location
+
 # Read data from jsonfile
 $json = (Get-Content "sphinx_settings.json" | ConvertFrom-Json)
 

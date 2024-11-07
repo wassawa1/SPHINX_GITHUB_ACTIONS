@@ -1,0 +1,27 @@
+.. {{ project_name }} documentation master file, created by
+   sphinx-quickstart on {{ now().strftime('%A %b %d %H:%M:%S %Y') }}.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+{{ project_name }} Documentation
+===============================
+
+Welcome to the documentation for the **{{ project_name }}** project. 
+This documentation provides comprehensive information on the project's setup, usage, and available features.
+
+{% if content_blocks %}
+.. toctree::
+   :maxdepth: 4
+   :caption: Contents:
+
+   {% for block in content_blocks %}
+   {{ block }}
+   {% endfor %}
+{% else %}
+.. toctree::
+   :maxdepth: 4
+   :caption: Contents:
+
+   main
+   operation_func
+{% endif %}
